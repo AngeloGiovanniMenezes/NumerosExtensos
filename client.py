@@ -21,6 +21,7 @@ while True:
         if checa_intervalo(int(numero)) is True:
             path = path + str(numero)
             JSON_traduzido = requests.get(path)
+            print(JSON_traduzido.content)
             break
         else:
             numero = input("Informe um valor inteiro para ser traduzido entre [-99999, 99999]: ")

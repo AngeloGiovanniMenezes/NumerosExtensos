@@ -29,15 +29,24 @@ class Tradutor():
         self.numero_traduzido = ""
 
         self.numero_entrada = self.removeZerosEsquerda(numero)
-        
-        self.testaNegativo(self.numero_entrada, self.numero_traduzido)
-        self.numero_entrada = str(self.numero_entrada)
-        self.numero_traduzido = self.traduzNumero(self.numero_entrada, self.numero_traduzido)
+        if (self.checaIntervalo() == True):
+            self.testaNegativo(self.numero_entrada, self.numero_traduzido) 
+            self.numero_entrada = str(self.numero_entrada)
+            self.numero_traduzido = self.traduzNumero(self.numero_entrada, self.numero_traduzido)
+        else:
+            self.numero_traduzido = "Numero fora do intervalo"
 
     def getTraduzido(self):
 
         print(self.numero_traduzido)
         return self.numero_traduzido
+
+    def checaIntervalo(self):
+
+        if ((self.numero_entrada < -99999) or (self.numero_entrada > 99999)):
+            return False
+        else:
+            return True
 
     '''
         remove todos os zeros a esquerda do numero
