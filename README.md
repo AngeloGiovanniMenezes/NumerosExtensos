@@ -1,15 +1,17 @@
 # NumerosExtensos
 
-Dependências
+API que responde a requests com um INT com um JSON com esse INT escrito em extenso em portuguÃªs.
+
+DependÃªncias
 Python 3.7
 biblioteca requests
 
 Execucao:
 
-Após a instalação da biblioteca requests com "pip install requests"
+ApÃ³s a instalaÃ§Ã£o da biblioteca requests com "pip install requests"
 Executar o servidor com "python server.py"
-Após o servidor ficara ouvindo na porta 3000, respondendo a comando curl.
-O número a ser traduzido pode ser passado com o commando "curl http://localhost:3000/#", onde # pode ser um número entre [-99999, 99999]
+ApÃ³s o servidor ficara ouvindo na porta 3000, respondendo a comando curl.
+O nÃºmero a ser traduzido pode ser passado com o commando "curl http://localhost:3000/#", onde # pode ser um nÃºmero entre [-99999, 99999]
 Respondendo com um json com a chave "extenso": "menos novecentos e noventa e nove"
 
-Também pode ser utilizado a classe client, passando como argumento o número a ser traduzido
+TambÃ©m pode ser utilizado a classe client, passando como argumento o nÃºmero a ser traduzido
