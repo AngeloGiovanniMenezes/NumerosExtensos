@@ -2,6 +2,12 @@
 
 API que responde a requests com um INT com um JSON com esse INT escrito em extenso em português.
 
+Exemplo:
+
+curl http://localhost:3000/4786
+
+Retorna um JSON com a chave "extenso": "quatro mil e setecentos e oitenta e seis"
+
 Dependências
 Python 3.7
 biblioteca requests
@@ -14,4 +20,4 @@ Após o servidor ficara ouvindo na porta 3000, respondendo a comando curl.
 O número a ser traduzido pode ser passado com o commando "curl http://localhost:3000/#", onde # pode ser um número entre [-99999, 99999]
 Respondendo com um json com a chave "extenso": "menos novecentos e noventa e nove"
 
-Também pode ser utilizado a classe client, passando como argumento o número a ser traduzido
+Também pode ser utilizado a classe client, passando como argumento o número a ser traduzido.
